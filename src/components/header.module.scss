@@ -1,0 +1,21 @@
+.toggleButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.toggleButton:focus { outline: none; }
+.dot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+
+    margin-left: 5px;
+    margin-right: 5px;
+    
+    background-color: #4b4c4c;
+
+}
+.dotCenter {
+    background-color: red;
+}
