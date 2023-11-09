@@ -1,9 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 20px;
+}
+
+.logo {
+    height: 50px;
+    cursor: pointer;
+}
+
 .toggleButton {
     background: transparent;
     border: none;
     cursor: pointer;
 }
-.toggleButton:focus { outline: none; }
+.toggleButton:focus {
+    outline: none;
+}
 .dot {
     display: inline-block;
     width: 4px;
