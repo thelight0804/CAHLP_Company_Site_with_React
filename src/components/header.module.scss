@@ -1,17 +1,17 @@
-.container {
+.header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    padding: 0 20px;
-}
+    padding: 20px 20px 50px 20px;
+    z-index: 100;
 
+}
 .logo {
     height: 50px;
     cursor: pointer;
 }
-
 .toggleButton {
     background: transparent;
     border: none;
@@ -33,5 +33,34 @@
 
 }
 .dotCenter {
-    background-color: red;
+    background-color: white;
+    border: 1px solid #4b4b4b;
+}
+
+// NavMenu
+.nav {
+    width: 100%;
+    height: 100vh;
+}
+.navButton {
+    display: block;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    padding: 10px 20px;
+
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e8e6e3;
+}
+.modalOpen {
+    background-color: #181a1b;
+
+    .dot {
+        background-color: white;
+    }
+    .dotCenter {
+        background-color: #4b4c4c;
+    }
 }
