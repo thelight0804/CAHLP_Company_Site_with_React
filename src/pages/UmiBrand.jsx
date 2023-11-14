@@ -1,8 +1,9 @@
 import React from "react";
+import styles from './UmiBrand.module.scss'
 
 function UmiBrand() {
   return (
-    <div>
+    <div className={styles.container}>
       <p>UmiBrand</p>
     </div>
   )

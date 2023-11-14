@@ -18,6 +18,7 @@ function Header() {
                 navigate("/");
               }} />
           ) : (
+            //TODO: 로고 흰색으로 고정
             <img src={"public/img/cahlp-dark.png"}
               className={styles.logo}
               onClick={() => {
