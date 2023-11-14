@@ -4,7 +4,7 @@ import styles from './header.module.scss'
 import { useNavigate } from "react-router-dom";
 
 function Header(){
-  var [isModalOpen, setIsModalOpen] = React.useState(true); // modal open 여부
+  var [isModalOpen, setIsModalOpen] = React.useState(false); // modal open 여부
   var navigate = useNavigate(); // react router의 navigate 함수
 
   return (
