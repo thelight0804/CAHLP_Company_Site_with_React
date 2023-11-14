@@ -1,9 +1,11 @@
 .header {
+    // 로고와 토글 버튼 정렬
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
+    // 상단 고정
     position: fixed;
     top: 0;
     left: 0;
@@ -36,7 +38,7 @@
     background-color: #4b4c4c;
 
 }
-.dotCenter {
+.dotCenter { // 중앙에 위치한 점
     background-color: white;
     border: 1px solid #4b4b4b;
 }
@@ -61,7 +63,7 @@
     font-weight: bold;
     color: #e8e6e3;
 }
-.modalOpen {
+.modalOpen { // NavMenu가 열렸을 때
     background-color: #181a1b;
 
     .dot {
