@@ -3,7 +3,7 @@ import React from "react";
 import styles from './header.module.scss'
 import { useNavigate } from "react-router-dom";
 
-function Header(){
+function Header() {
   var [isModalOpen, setIsModalOpen] = React.useState(false); // modal open 여부
   var navigate = useNavigate(); // react router의 navigate 함수
 
@@ -13,11 +13,17 @@ function Header(){
           {isModalOpen ? (
             <img src={"public/img/cahlp-white.png"}
               className={styles.logo}
-              onClick={() => { navigate("/"); }} />
+              onClick={() => {
+                setIsModalOpen(false);
+                navigate("/");
+              }} />
           ) : (
             <img src={"public/img/cahlp-dark.png"}
               className={styles.logo}
-              onClick={() => { navigate("/"); }} />
+              onClick={() => {
+                setIsModalOpen(false);
+                navigate("/");
+              }} />
           )}
           <button
               className={styles.toggleButton}
@@ -28,7 +34,7 @@ function Header(){
               <span className={styles.dot}></span>
           </button>
         </div>
-        {isModalOpen && <NavMenu isModalOpen={isModalOpen}/>}
+        {isModalOpen && <NavMenu isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} navigate={navigate}/>}
       </>
   );
 }
@@ -40,10 +46,13 @@ function NavMenu(props){
   return(
     <div className={`${styles.nav} ${props.isModalOpen && styles.modalOpen}`}>
       <button className={styles.navButton}
-        onClick={console.log("우미 브랜드 (준비중)")}
+        onClick={()=>{
+          props.setIsModalOpen(false);
+          props.navigate("UmiBrand");
+        }}
       >우미 브랜드 (준비중)</button>
       <button className={styles.navButton}
-        onClick={console.log("E-Service")}
+        onClick={()=>{window.location.href = "https://login.office.hiworks.com/cahlp.kr";}}
       >E-Service</button>
     </div>
   );

@@ -4,7 +4,7 @@ import Header from "../components/Header"
 function Main(){
   return (
     <div>
-      <Header />
+      <p>메인 페이지</p>
     </div>
   )
 }
