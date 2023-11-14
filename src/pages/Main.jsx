@@ -1,10 +1,21 @@
 import React from "react";
-import Header from "../components/Header"
+
+import styles from './main.module.scss'
 
 function Main(){
   return (
-    <div>
-      <p>메인 페이지</p>
+    <div className="container">
+      <div className="header">
+        <video muted autoPlay loop>
+          <source src={"./../../public/video/via.mp4"} type="video/mp4" />
+        </video>
+      </div>
+      <div className="content">
+
+      </div>
+      <div className="footer">
+
+      </div>
     </div>
   )
 }
