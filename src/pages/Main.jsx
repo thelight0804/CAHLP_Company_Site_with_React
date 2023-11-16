@@ -1,8 +1,11 @@
 import React from "react";
 
 import styles from './main.module.scss'
+import slideImages from './../../public/img/index'
 
 function Main(){
+
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -15,6 +18,7 @@ function Main(){
         </div>
       </div>
       <div className={styles.content}>
+        <img src={slideImages[0]} />
         <h2>"우리는 이런 고민을 했습니다."</h2>
 
       </div>
