@@ -21,8 +21,13 @@ video {
   }
 }
 
-.content {
+.contentBox{
   margin: 16rem 0;
+  text-align: center;
+  img {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 .slideImage {
   width: 70%;

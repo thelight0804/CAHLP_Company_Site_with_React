@@ -27,9 +27,18 @@ function Main() {
           <SlideImage styles={styles}/>
           <h2>
             "우리는 이런 고민을 했습니다." <br/>
+          </h2>
+          <h3>
             왜? 고양이, 강아지를 위한 반려동물제품은 많지만, <br/>
             이색반려동물을 위한 제품과 서비스는 없을까?
-          </h2>
+          </h3>
+        </div>
+        <div className={styles.contentBox}>
+          <img src="./../../public/img/cahlp-dark.png" />
+          <h3>
+            우리는 이색반려동물을 키움에 있어 <br/>
+            정보와 데이터가 발목을 잡아서는 안된다고 생각합니다.
+          </h3>
         </div>
       </div>
 
