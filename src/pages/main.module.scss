@@ -20,17 +20,42 @@ video {
     margin-top: 15px;
   }
 }
-
-.contentBox{
-  margin: 16rem 0;
+.contentBox {
+  margin: 16rem auto;
   text-align: center;
   img {
     width: 80%;
     margin: 0 auto;
   }
 }
+.inViewBox{ // 화면에 보일 때 0.8초 expandScale 실행
+  animation: expandScale 0.8s forwards;
+}
+.outViewBox{ // 화면에 보이지 않을 때 shrinkScale 실행
+  animation: shrinkScale 0.8s forwards;
+}
+
 .slideImage {
   width: 70%;
   margin: 0 auto;
   object-fit: cover;
+}
+
+// 요소가 커지는 애니메이션
+@keyframes expandScale {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+// 요소가 작아지는 애니메이션
+@keyframes shrinkScale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
 }

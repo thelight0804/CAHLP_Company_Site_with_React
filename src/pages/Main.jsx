@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import useCustomInView from './../hooks/useCustomInView';
 
 import styles from './main.module.scss'
 import slideImages from './../../public/img/index'
@@ -7,6 +8,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function Main() {
+  // useInView hook 설정
+  const {ref: ref1, inView: inView1, entry: entry1} = useCustomInView();
+  const {ref: ref2, inView: inView2, entry: entry2} = useCustomInView();
+  
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -23,7 +28,7 @@ function Main() {
       </div>
 
       <div className={styles.content}>
-        <div className={styles.contentBox}>
+        <div ref={ref1} className={`${styles.contentBox} ${inView1 ? styles.inViewBox : styles.outViewBox}`}>
           <SlideImage styles={styles}/>
           <h2>
             "우리는 이런 고민을 했습니다." <br/>
@@ -33,7 +38,7 @@ function Main() {
             이색반려동물을 위한 제품과 서비스는 없을까?
           </h3>
         </div>
-        <div className={styles.contentBox}>
+        <div ref={ref2} className={`${styles.contentBox} ${inView2 ? styles.inViewBox : styles.outViewBox}`}>
           <img src="./../../public/img/cahlp-dark.png" />
           <h3>
             우리는 이색반려동물을 키움에 있어 <br/>
