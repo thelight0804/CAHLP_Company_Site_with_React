@@ -34,11 +34,41 @@ video {
 .outViewBox{ // 화면에 보이지 않을 때 shrinkScale 실행
   animation: shrinkScale 0.8s forwards;
 }
-
 .slideImage {
   width: 70%;
   margin: 0 auto;
   object-fit: cover;
+}
+.bottomBorder {
+  margin: 0 10px;
+  border-bottom: 5px solid #e5e5e5;
+}
+.missionHeader { // 미션 제목 그라데이션
+  background: linear-gradient(to right top, #0ca246, #347abe);
+  color: transparent;
+  -webkit-background-clip: text; 
+}
+
+// 특허 출원, 디자인 출원, 상표 출원
+.applyList {
+  list-style: none;
+  margin: 0 3rem;
+  padding: 0;
+  text-align: center;
+}
+.project {
+  // 가로로 3개씩 배치
+  display: inline-block;
+  width: 32%;
+  vertical-align: top;
+}
+.projectName, .projectCount{
+  text-align: center;
+  color: #45c2b1;
+}
+.projectCount {
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 // 요소가 커지는 애니메이션

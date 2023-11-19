@@ -53,7 +53,7 @@ function NavMenu(props){
         }}
       >우미 브랜드 (준비중)</button>
       <button className={styles.navButton}
-        onClick={()=>{window.location.href = "https://login.office.hiworks.com/cahlp.kr";}}
+        onClick={()=> window.location.href = "https://login.office.hiworks.com/cahlp.kr" }
       >E-Service</button>
     </div>
   );
