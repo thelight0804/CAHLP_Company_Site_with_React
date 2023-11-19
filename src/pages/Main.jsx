@@ -16,6 +16,7 @@ function Main() {
   const {ref: ref5, inView: inView5, entry: entry5} = useCustomInView();
   const {ref: ref6, inView: inView6, entry: entry6} = useCustomInView();
   const {ref: ref7, inView: inView7, entry: entry7} = useCustomInView();
+  const {ref: ref8, inView: inView8, entry: entry8} = useCustomInView();
 
   
   return (
@@ -103,7 +104,7 @@ function Main() {
       <div 
         ref={ref7}
         className={`${styles.contentBox} ${inView7 ? styles.inViewBox : styles.outViewBox}`}
-        style={{marginTop: '2rem'}}
+        style={{marginTop: '2rem', marginBottom: '2rem'}}
       >
         <ul className={styles.applyList}>
           <li className={styles.project}>
@@ -119,15 +120,16 @@ function Main() {
             <h3 className={styles.projectCount}>2</h3>
           </li>
         </ul>
-        <p style={{
-          textAlign: 'right',
-          margin: '1rem 2rem',
-          color: '#ccc'
-        }}>(2023.10.20일 기준)</p>
       </div>
+      <p style={{
+        textAlign: 'right',
+        margin: '1rem 2rem',
+        color: '#ccc'
+      }}>(2023.10.20일 기준)</p>
+      <History2023/>
 
       <div className={styles.footer}>
-
+        
       </div>
     </div>
   )
@@ -159,6 +161,58 @@ function SlideImage({styles}) {
         })
       }
     </Slider>
+  );
+}
+
+// 2023 약사 컴포넌트
+function History2023() {
+  return (
+    <div className={styles.history}>
+      <div className={styles.historyYear}>
+        <h3>2023</h3>
+        <p>사업 시작</p>
+      </div>
+      <div className={styles.historyContent}>
+        <h3>2023.09</h3>
+        <p>부.울.경 지방 중소벤처기업청- 2023 부스타락셀 엑셀러레이팅 지원사업 선정</p>
+      </div>
+      <div className={styles.historyContent}>
+        <h3>2023.08</h3>
+        <p>부산경제진흥원 - 부산시 기술창업 인큐베이팅 지원사업 우수기업 선정</p>
+      </div>
+      <div className={styles.historyContent}>
+        <h3>2023.07</h3>
+        <p>SCI평가정보 - 우수기술기업인증 (T6-)</p>
+      </div>
+      <div className={styles.historyContent}>
+        <h3>2023.07</h3>
+        <p>학생 창업유망팀 300 (2023) - 성장 트랙 최종 선정</p>
+      </div>
+      <div className={styles.historyContent}>
+        <h3>2023.06</h3>
+        <p>자체 온프레미스 서버 아키텍쳐 구축</p>
+      </div>
+      <div className={styles.historyContent}>
+        <h3>2023.06</h3>
+        <p>동의대학교 창업교육센터 소속 - 창업빌리지 입주</p>
+      </div>
+      <div className={styles.historyContent}>
+        <h3>2023.05</h3>
+        <p>창업진흥원 - 창업중심대학 예비 선정</p>
+      </div>
+      <div className={styles.historyContent}>
+        <h3>2023.04</h3>
+        <p>부산경제진흥원 - 부산시 기술창업 인큐베이팅 지원사업 선정</p>
+      </div>
+      <div className={styles.historyContent}>
+        <h3>2023.03</h3>
+        <p>K-Global 창업멘토링 프로그램 21기 멘티 선정</p>
+      </div>
+      <div className={styles.historyContent}>
+        <h3>2023.03</h3>
+        <p>2023 동남권 예비 창업자를 위한 네트워킹 데이 (동의대학교 Linc3.0) 공동 행사 개최</p>
+      </div>
+  </div>
   );
 }
 

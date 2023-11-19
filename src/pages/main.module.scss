@@ -23,6 +23,7 @@ video {
 .contentBox {
   margin: 16rem auto;
   text-align: center;
+  word-break: keep-all; // 화면 크기에 따라 단어 기준으로 줄바꿈
   img {
     width: 80%;
     margin: 0 auto;
@@ -69,6 +70,28 @@ video {
 .projectCount {
   font-weight: bold;
   font-size: 2rem;
+}
+
+// 약사
+.history {
+  display: grid;
+  margin: 0 1rem;
+}
+.historyYear {
+  grid-column: 1; // grid 1열에 배치
+  font-weight: bold;
+  margin-right: 1rem;
+  h3 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+.historyContent {
+  grid-column: 2; // grid 1열에 배치
+  color: #666;
+  text-align: left;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 // 요소가 커지는 애니메이션
