@@ -26,6 +26,7 @@ function Main() {
           <source src={"./../../public/video/via.mp4"} type="video/mp4" />
         </video>
         <div className={styles.mainText}>
+          {/* TODO: [회의] 글자 색 가독성으로 인한 변경 */}
           <h2>" 누구나 마음 편히 이색반려동물을 키울수 있는 그날까지."</h2>
           <h3>
             누구나, 언제, 어디서든, 관상어, 육상생물들도 안전하고, <br/>
