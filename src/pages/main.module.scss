@@ -75,7 +75,9 @@ video {
 // 약사
 .history {
   display: grid;
-  margin: 0 1rem;
+  grid-template-columns: minmax(100px, 20%) 80%; // 1열 20%(최소 100px), 2열 80%
+  // TODO: 데스크탑이면 grid-template-columns: minmax(100px, 20%) 60%;
+  margin: 2rem auto;
 }
 .historyYear {
   grid-column: 1; // grid 1열에 배치

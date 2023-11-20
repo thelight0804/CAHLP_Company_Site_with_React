@@ -127,7 +127,8 @@ function Main() {
         margin: '1rem 2rem',
         color: '#ccc'
       }}>(2023.10.20일 기준)</p>
-      <History2023/>
+      <History2023 />
+      <History2022 />
 
       <div className={styles.footer}>
         
@@ -212,6 +213,38 @@ function History2023() {
       <div className={styles.historyContent}>
         <h3>2023.03</h3>
         <p>2023 동남권 예비 창업자를 위한 네트워킹 데이 (동의대학교 Linc3.0) 공동 행사 개최</p>
+      </div>
+  </div>
+  );
+}
+
+// 2022 약사 컴포넌트
+function History2022() {
+  return (
+    <div className={styles.history}>
+      <div className={styles.historyYear}>
+        <h3>2022</h3>
+        <p>MVP 검증</p>
+      </div>
+      <div className={styles.historyContent}>
+        <h3>2022.12</h3>
+        <p>부산경제진흥원 - 부산창업카페 대학생 IR 데모데이 최우수상 수상</p>
+      </div>
+      <div className={styles.historyContent}>
+        <h3>2022.11</h3>
+        <p>산학협력 EXPO 제품전시회 참가</p>
+      </div>
+      <div className={styles.historyContent}>
+        <h3>2023.07</h3>
+        <p>SCI평가정보 - 우수기술기업인증 (T6-)</p>
+      </div>
+      <div className={styles.historyContent}>
+        <h3>2022.08</h3>
+        <p>학생 창업유망팀 300 (2022)- 성장 트랙 최종 선정</p>
+      </div>
+      <div className={styles.historyContent}>
+        <h3>2022.03</h3>
+        <p>이색반려동물을 위한 스마트 IOT 관리 키트 프로젝트 시작</p>
       </div>
   </div>
   );
