@@ -17,6 +17,9 @@ function Main() {
   const {ref: ref6, inView: inView6, entry: entry6} = useCustomInView();
   const {ref: ref7, inView: inView7, entry: entry7} = useCustomInView();
   const {ref: ref8, inView: inView8, entry: entry8} = useCustomInView();
+  const {ref: ref9, inView: inView9, entry: entry9} = useCustomInView();
+  const {ref: ref10, inView: inView10, entry: entry10} = useCustomInView();
+
 
   
   return (
@@ -46,6 +49,7 @@ function Main() {
             이색반려동물을 위한 제품과 서비스는 없을까?
           </h3>
         </div>
+
         <div ref={ref2} className={`${styles.contentBox} ${inView2 ? styles.inViewBox : styles.outViewBox}`}>
           <img src="./../../public/img/cahlp-dark.png" />
           <h3>
@@ -53,6 +57,7 @@ function Main() {
             정보와 데이터가 발목을 잡아서는 안된다고 생각합니다.
           </h3>
         </div>
+        
         <div ref={ref3} className={`${styles.contentBox} ${inView3 ? styles.inViewBox : styles.outViewBox}`}>
           <h2>CAHLP(캘프) 컴퍼니는</h2>
           <h3>이색반려동물을 직접키우고,</h3>
@@ -60,30 +65,32 @@ function Main() {
           <h3>그 과정에서 정말 큰 기회를 발견했습니다.</h3>
         </div>
 
-        <h1 style={{textAlign: 'center'}}>미션, 비전 & 핵심 가치</h1>
+        <h1 style={{textAlign: 'center', fontSize: '2.8rem'}}>미션, 비전 & 핵심 가치</h1>
         <div className={styles.bottomBorder}/>
         <div ref={ref4} 
           className={`${styles.contentBox} ${inView4 ? styles.inViewBox : styles.outViewBox}`}
           style={{marginTop: '2rem'}}
         >
-          <h1 className={styles.missionHeader}>[ 미션 MISSION ]</h1>
+          <h1 className={styles.highlight}>[ 미션 MISSION ]</h1>
           <p>우리의 조직이 왜 존재하는가</p>
           <h3 style={{marginTop: '2rem'}}>
             “누구나 마음 편히 이색반려동물을 <br/>
             키울수 있는 그날까지 만들어 가는것”
           </h3>
         </div>
+
         <div ref={ref5}
           className={`${styles.contentBox} ${styles.mission} ${inView5 ? styles.inViewBox : styles.outViewBox}`}
           style={{marginTop: '2rem'}}
         >
-          <h1 className={styles.missionHeader}>[ 비전 VISION ]</h1>
+          <h1 className={styles.highlight}>[ 비전 VISION ]</h1>
           <p>우리는 어떤 미래를 그리고 있는가</p>
           <h3 style={{marginTop: '2rem'}}>
             “전세계에 있는 누구나 이색반려동물을 키울때 <br/>
             가장 먼저 떠올리고 찾는 존재가 되는것”
           </h3>
         </div>
+
         <div ref={ref6} className={`${styles.contentBox} ${inView6 ? styles.inViewBox : styles.outViewBox}`}>
           <h2>CAHLP(캘프) 컴퍼니는</h2>
           <h3>
@@ -98,37 +105,65 @@ function Main() {
             로 나아갈 수 있도록 전진 할것입니다.
           </h3>
         </div>
+
+        <h1 style={{textAlign: 'center', fontSize: '2.8rem'}}>우리가 걸어온 길은</h1>
+        <div className={styles.bottomBorder}/>
+        <div 
+          ref={ref7}
+          className={`${styles.contentBox} ${inView7 ? styles.inViewBox : styles.outViewBox}`}
+          style={{marginTop: '2rem', marginBottom: '2rem'}}
+        >
+          <ul className={styles.applyList}>
+            <li className={styles.project}>
+              <h3 className={styles.projectName}>특허 출원</h3>
+              <h3 className={styles.projectCount}>2</h3>
+            </li>
+            <li className={styles.project}>
+              <h3 className={styles.projectName}>디자인 출원</h3>
+              <h3 className={styles.projectCount}>2</h3>
+            </li>
+            <li className={styles.project}>
+              <h3 className={styles.projectName}>상표 출원</h3>
+              <h3 className={styles.projectCount}>2</h3>
+            </li>
+          </ul>
+        </div>
+        <p style={{
+          textAlign: 'right',
+          margin: '1rem 2rem',
+          color: '#ccc'
+        }}>(2023.10.20일 기준)</p>
+        <History2023 />
+        <History2022 />
+
+        <div ref={ref8} className={`${styles.contentBox} ${inView8 ? styles.inViewBox : styles.outViewBox}`}>
+          <h1 className={styles.highlight} style={{fontSize: '3.5rem'}}>Team CAHLP</h1>
+          <p>우리는 팀이기에 불가능이란 없습니다</p>
+        </div>
+        <h1 style={{textAlign: 'center', fontSize: '2.8rem'}}>CAHLP 컴퍼니의 조직문화</h1>
+        <div className={styles.bottomBorder}/>
+        <div ref={ref9} 
+          className={`${styles.contentBox} ${inView9 ? styles.inViewBox : styles.outViewBox}`}
+          style={{marginTop: '2rem'}}
+        >
+          <h1 className={styles.highlight}> &lt; 언제나 강조되는 핵심 키워드 &gt;</h1>
+          <h2>#팀 #소통 # 책임과 존중</h2>
+        </div>
+        <div ref={ref10} 
+          className={`${styles.contentBox} ${inView10 ? styles.inViewBox : styles.outViewBox}`}
+          style={{marginTop: '2rem'}}
+        >
+          <h1 className={styles.highlight}> &lt; 주요문화 &gt;</h1>
+          <h2>
+            끊임없는 소통 <br/>
+            책임과 존중 <br/>
+            수평적인 조직문화 <br/>
+            자발적 동기부여 <br/>
+            빠른 실행력 <br/>
+          </h2>
+        </div>
       </div>
 
-      <h1 style={{textAlign: 'center'}}>우리가 걸어온 길은</h1>
-      <div className={styles.bottomBorder}/>
-      <div 
-        ref={ref7}
-        className={`${styles.contentBox} ${inView7 ? styles.inViewBox : styles.outViewBox}`}
-        style={{marginTop: '2rem', marginBottom: '2rem'}}
-      >
-        <ul className={styles.applyList}>
-          <li className={styles.project}>
-            <h3 className={styles.projectName}>특허 출원</h3>
-            <h3 className={styles.projectCount}>2</h3>
-          </li>
-          <li className={styles.project}>
-            <h3 className={styles.projectName}>디자인 출원</h3>
-            <h3 className={styles.projectCount}>2</h3>
-          </li>
-          <li className={styles.project}>
-            <h3 className={styles.projectName}>상표 출원</h3>
-            <h3 className={styles.projectCount}>2</h3>
-          </li>
-        </ul>
-      </div>
-      <p style={{
-        textAlign: 'right',
-        margin: '1rem 2rem',
-        color: '#ccc'
-      }}>(2023.10.20일 기준)</p>
-      <History2023 />
-      <History2022 />
 
       <div className={styles.footer}>
         
@@ -166,7 +201,9 @@ function SlideImage({styles}) {
   );
 }
 
-// 2023 약사 컴포넌트
+/**
+ * 2023 약사 컴포넌트
+ */
 function History2023() {
   return (
     <div className={styles.history}>
@@ -218,7 +255,9 @@ function History2023() {
   );
 }
 
-// 2022 약사 컴포넌트
+/**
+ * 2022 약사 컴포넌트
+ */
 function History2022() {
   return (
     <div className={styles.history}>

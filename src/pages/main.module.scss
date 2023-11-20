@@ -44,7 +44,8 @@ video {
   margin: 0 10px;
   border-bottom: 5px solid #e5e5e5;
 }
-.missionHeader { // 미션 제목 그라데이션
+.highlight { // 미션 제목 그라데이션
+  font-size: 2rem;
   background: linear-gradient(to right top, #0ca246, #347abe);
   color: transparent;
   -webkit-background-clip: text; 
