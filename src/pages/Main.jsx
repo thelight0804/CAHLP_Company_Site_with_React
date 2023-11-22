@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import useCustomInView from './../hooks/useCustomInView';
 
 import styles from './main.module.scss'
-import slideImages from './../../public/img/index'
+import {slideImages, supportImages} from './../../public/img/index'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -167,6 +167,11 @@ function Main() {
         <h1 className={styles.paragraph}>미디어 속 CAHLP 컴퍼니</h1>
         <div className={styles.bottomBorder}/>
         <Media />
+
+        <div ref={ref11} className={`${styles.contentBox} ${inView11 ? styles.inViewBox : styles.outViewBox}`}>
+          <h1 className={styles.highlight} style={{fontSize: '3.5rem'}}>Supports</h1>
+
+        </div>
       </div>
 
 
