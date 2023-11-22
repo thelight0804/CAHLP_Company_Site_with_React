@@ -35,6 +35,13 @@ video {
 .outViewBox{ // 화면에 보이지 않을 때 shrinkScale 실행
   animation: shrinkScale 0.8s forwards;
 }
+.paragraph { // 단락
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #4b4c4c;
+}
+// 슬라이드
 .slideImage {
   width: 70%;
   margin: 0 auto;
@@ -44,7 +51,8 @@ video {
   margin: 0 10px;
   border-bottom: 5px solid #e5e5e5;
 }
-.highlight { // 미션 제목 그라데이션
+// 그라데이션 하이라이트
+.highlight {
   font-size: 2rem;
   background: linear-gradient(to right top, #0ca246, #347abe);
   color: transparent;

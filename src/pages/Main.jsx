@@ -65,7 +65,7 @@ function Main() {
           <h3>그 과정에서 정말 큰 기회를 발견했습니다.</h3>
         </div>
 
-        <h1 style={{textAlign: 'center', fontSize: '2.8rem'}}>미션, 비전 & 핵심 가치</h1>
+        <h1 className={styles.paragraph}>미션, 비전 & 핵심 가치</h1>
         <div className={styles.bottomBorder}/>
         <div ref={ref4} 
           className={`${styles.contentBox} ${inView4 ? styles.inViewBox : styles.outViewBox}`}
@@ -106,7 +106,7 @@ function Main() {
           </h3>
         </div>
 
-        <h1 style={{textAlign: 'center', fontSize: '2.8rem'}}>우리가 걸어온 길은</h1>
+        <h1 className={styles.paragraph}>우리가 걸어온 길은</h1>
         <div className={styles.bottomBorder}/>
         <div 
           ref={ref7}
@@ -140,7 +140,7 @@ function Main() {
           <h1 className={styles.highlight} style={{fontSize: '3.5rem'}}>Team CAHLP</h1>
           <p>우리는 팀이기에 불가능이란 없습니다</p>
         </div>
-        <h1 style={{textAlign: 'center', fontSize: '2.8rem'}}>CAHLP 컴퍼니의 조직문화</h1>
+        <h1 className={styles.paragraph}>CAHLP 컴퍼니의 조직문화</h1>
         <div className={styles.bottomBorder}/>
         <div ref={ref9} 
           className={`${styles.contentBox} ${inView9 ? styles.inViewBox : styles.outViewBox}`}
