@@ -1,3 +1,7 @@
+.container {
+  word-break: keep-all; // 화면 크기에 따라 단어 기준으로 줄바꿈
+}
+
 video {
   margin-top: 0;
   position: relative;
@@ -23,7 +27,6 @@ video {
 .contentBox {
   margin: 16rem auto;
   text-align: center;
-  word-break: keep-all; // 화면 크기에 따라 단어 기준으로 줄바꿈
   img {
     width: 80%;
     margin: 0 auto;
@@ -104,6 +107,31 @@ video {
   text-align: left;
   padding: 0.5rem 0;
   border-bottom: 1px solid #e5e5e5;
+}
+// 미디어
+.media {
+  width: 100%;
+  padding: 1.5rem 0.5rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+.mediaTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.mediaDetail {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+.mediaDate {
+  font-size: 0.8rem;
+  color: #666;
+}
+.media:hover, .media:active {
+  // TODO: [회의] 마우스 올렸을 때 색깔 지정
+  background: linear-gradient(to right top, #ffdcdc, #fff8e5);
+  cursor: pointer;
 }
 
 // 요소가 커지는 애니메이션

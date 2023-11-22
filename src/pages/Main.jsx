@@ -19,6 +19,7 @@ function Main() {
   const {ref: ref8, inView: inView8, entry: entry8} = useCustomInView();
   const {ref: ref9, inView: inView9, entry: entry9} = useCustomInView();
   const {ref: ref10, inView: inView10, entry: entry10} = useCustomInView();
+  const {ref: ref11, inView: inView11, entry: entry11} = useCustomInView();
 
 
   
@@ -162,6 +163,10 @@ function Main() {
             빠른 실행력 <br/>
           </h2>
         </div>
+
+        <h1 className={styles.paragraph}>미디어 속 CAHLP 컴퍼니</h1>
+        <div className={styles.bottomBorder}/>
+        <Media />
       </div>
 
 
@@ -286,6 +291,66 @@ function History2022() {
         <p>이색반려동물을 위한 스마트 IOT 관리 키트 프로젝트 시작</p>
       </div>
   </div>
+  );
+}
+
+/**
+ * 미디어&뉴스 컴포넌트
+ */
+function Media() {
+  return (
+    <>
+      <section className={styles.media}>
+          <a 
+            className={styles.mediaItem}
+            onClick={() => window.open('https://www.youtube.com/watch?v=XqSDOBbvzQE&t=1534s', '_blank')}
+          >
+              <h2 className={styles.mediaTitle}>인도네시아 통신원 연결</h2>
+              <h3 className={styles.mediaDetail}>[개천절 LIVEㅣ부산시 기술창업 인큐베이팅 지원사업ㅣ최인수 캘프대표]</h3>
+              <p className={styles.mediaDate}>2023-10-03 | 부산영어방송 BeFM</p>
+            </a>
+      </section>
+      <section className={styles.media}>
+        <a 
+          className={styles.mediaItem}
+          onClick={() => window.open('https://www.busan.com/view/busan/view.php?code=2023091018103185349', '_blank')}
+        >
+          <h2 className={styles.mediaTitle}>캘프 “성장하는 관상어 시장, 기술로 사로잡고 싶어요”</h2>
+          <h3 className={styles.mediaDetail}>[2023 부산 기술창업기업]</h3>
+          <p className={styles.mediaDate}>2023-09-10 | 부산일보</p>
+        </a>
+      </section>
+      <section className={styles.media}>
+        <a 
+          className={styles.mediaItem}
+          onClick={() => window.open('https://www.youtube.com/watch?v=hhqS0FubHSA&t=237s', '_blank')}
+        >
+          <h2 className={styles.mediaTitle}>부기 드디어 글로벌 기업에 입사..?😲 부기의 [구글 스타트업 스쿨] 입학기!</h2>
+          <h3 className={styles.mediaDetail}>[부기가간다]</h3>
+          <p className={styles.mediaDate}>2023-06-08 | 부기튜브</p>
+        </a>
+      </section>
+      <section className={styles.media}>
+        <a 
+          className={styles.mediaItem}
+          onClick={() => window.open('https://www.youtube.com/watch?v=9u5lybcYZ-k', '_blank')}
+        >
+          <h2 className={styles.mediaTitle}>“서울 안 가도 돼”…구글한테 직접 배운다</h2>
+          <h3 className={styles.mediaDetail}>[부산MBC 뉴스]</h3>
+          <p className={styles.mediaDate}>2023-04-25 | 부산MBC 뉴스</p>
+        </a>
+      </section>
+      <section className={styles.media}>
+        <a 
+          className={styles.mediaItem}
+          onClick={() => window.open('https://view.asiae.co.kr/article/2022102012070270164', '_blank')}
+        >
+          <h2 className={styles.mediaTitle}>동의대, ‘2022 학생 창업유망팀 300 경진대회’ 7개 팀 선정</h2>
+          <h3 className={styles.mediaDetail}>[아시아경제]</h3>
+          <p className={styles.mediaDate}>2022-10-20 | 아시아경제</p>
+        </a>
+      </section>
+    </>
   );
 }
 
