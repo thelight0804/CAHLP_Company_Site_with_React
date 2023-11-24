@@ -1,0 +1,159 @@
+.container {
+  word-break: keep-all; // 화면 크기에 따라 단어 기준으로 줄바꿈
+}
+
+video {
+  margin-top: 0;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; // 화면을 꽉 채우기
+}
+.mainText {
+  position: absolute;
+  color: white;
+  width: 100%;
+
+  // 화면 중앙 정렬
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  
+  h3 {
+    margin-top: 15px;
+  }
+}
+.contentBox {
+  margin: 16rem auto;
+  text-align: center;
+  img {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+.inViewBox{ // 화면에 보일 때 0.8초 expandScale 실행
+  animation: expandScale 0.8s forwards;
+}
+.outViewBox{ // 화면에 보이지 않을 때 shrinkScale 실행
+  animation: shrinkScale 0.8s forwards;
+}
+.paragraph { // 단락
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #4b4c4c;
+}
+// 슬라이드
+.slideImage {
+  width: 70%;
+  margin: 0 auto;
+  object-fit: cover;
+}
+.bottomBorder {
+  margin: 0 10px;
+  border-bottom: 5px solid #e5e5e5;
+}
+// 그라데이션 하이라이트
+.highlight {
+  font-size: 2rem;
+  background: linear-gradient(to right top, #0ca246, #347abe);
+  color: transparent;
+  -webkit-background-clip: text; 
+}
+
+// 특허 출원, 디자인 출원, 상표 출원
+.applyList {
+  list-style: none;
+  margin: 0 3rem;
+  padding: 0;
+  text-align: center;
+}
+.project {
+  // 가로로 3개씩 배치
+  display: inline-block;
+  width: 32%;
+  vertical-align: top;
+}
+.projectName, .projectCount{
+  text-align: center;
+  color: #45c2b1;
+}
+.projectCount {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+// 약사
+.history {
+  display: grid;
+  grid-template-columns: minmax(100px, 20%) 80%; // 1열 20%(최소 100px), 2열 80%
+  // TODO: 데스크탑이면 grid-template-columns: minmax(100px, 20%) 60%;
+  margin: 2rem auto;
+}
+.historyYear {
+  grid-column: 1; // grid 1열에 배치
+  font-weight: bold;
+  margin-right: 1.5rem;
+  text-align: right;
+  h3 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+.historyContent {
+  grid-column: 2; // grid 1열에 배치
+  color: #666;
+  text-align: left;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+// 미디어
+.media {
+  width: 100%;
+  padding: 1.5rem 0 1.5rem 1rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+.mediaTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.mediaDetail {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+.mediaDate {
+  font-size: 0.8rem;
+  color: #666;
+}
+.media:hover, .media:active {
+  // TODO: [회의] 마우스 올렸을 때 색깔 지정
+  background: linear-gradient(to right top, #ffdcdc, #fff8e5);
+  cursor: pointer;
+}
+// Supports 이미지
+.supportContainer {
+  display: flex;
+  
+}
+
+// 요소가 커지는 애니메이션
+@keyframes expandScale {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+// 요소가 작아지는 애니메이션
+@keyframes shrinkScale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}

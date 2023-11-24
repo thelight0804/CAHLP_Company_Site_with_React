@@ -18,6 +18,7 @@ function Header() {
                 navigate("/");
               }} />
           ) : (
+            //TODO: [회의] 로고 흰색으로 고정
             <img src={"public/img/cahlp-dark.png"}
               className={styles.logo}
               onClick={() => {
@@ -52,7 +53,7 @@ function NavMenu(props){
         }}
       >우미 브랜드 (준비중)</button>
       <button className={styles.navButton}
-        onClick={()=>{window.location.href = "https://login.office.hiworks.com/cahlp.kr";}}
+        onClick={()=> window.location.href = "https://login.office.hiworks.com/cahlp.kr" }
       >E-Service</button>
     </div>
   );

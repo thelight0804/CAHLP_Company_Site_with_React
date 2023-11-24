@@ -1,10 +1,17 @@
 .header {
+    // 로고와 토글 버튼 정렬
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    padding: 10px 20px 50px 20px;
+    // 상단 고정
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 10px 20px 10px 20px;
     z-index: 100;
 }
 .logo {
@@ -31,15 +38,17 @@
     background-color: #4b4c4c;
 
 }
-.dotCenter {
+.dotCenter { // 중앙에 위치한 점
     background-color: white;
     border: 1px solid #4b4b4b;
 }
 
 // NavMenu
 .nav {
+    position: fixed;
+    top: 70px; // Header 높이만큼 상단에서 떨어지게 설정
     width: 100%;
-    height: 84.2vh;
+    height: calc(100vh - 70px); // 전체 높이에서 Header 높이를 뺀 만큼
     z-index: 99;
 }
 .navButton {
@@ -54,7 +63,7 @@
     font-weight: bold;
     color: #e8e6e3;
 }
-.modalOpen {
+.modalOpen { // NavMenu가 열렸을 때
     background-color: #181a1b;
 
     .dot {
