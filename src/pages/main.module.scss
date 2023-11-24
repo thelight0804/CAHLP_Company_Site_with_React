@@ -133,6 +133,11 @@ video {
   background: linear-gradient(to right top, #ffdcdc, #fff8e5);
   cursor: pointer;
 }
+// Supports 이미지
+.supportContainer {
+  display: flex;
+  
+}
 
 // 요소가 커지는 애니메이션
 @keyframes expandScale {
