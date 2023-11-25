@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import useCustomInView from './../hooks/useCustomInView';
+import Footer from "../components/Footer";
 
 import styles from './main.module.scss'
 import {slideImages, supportImages, partnerImages} from './../../public/img/index'
@@ -194,9 +195,8 @@ function Main() {
         </div>
       </div>
 
-
       <div className={styles.footer}>
-        
+        <Footer />
       </div>
     </div>
   )
