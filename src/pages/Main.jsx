@@ -170,14 +170,14 @@ function Main() {
 
         <div ref={ref11} className={`${styles.contentBox} ${inView11 ? styles.inViewBox : styles.outViewBox}`}>
           <h1 className={styles.highlight} style={{fontSize: '3.5rem'}}>Supports</h1>
-          {supportImages.map((image, i)=>{
-            return (
-              <div key = {i} className={styles.supportContainer}>
-                <img src={image} alt="supportImage" className={styles.supportImage}/>
-              </div>
+          <div className={styles.supportContainer}>
+            {supportImages.map((image, i)=>{
+              return (
+                  <img src={image} key = {i} alt="supportImage" className={styles.supportImage}/>
                 )
               })
-          }
+            }
+          </div>
         </div>
       </div>
 
