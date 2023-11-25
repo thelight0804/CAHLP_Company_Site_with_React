@@ -14,9 +14,17 @@ import support2 from './supports/deu_center.png'
 import support3 from './supports/k_ict_logo2.png'
 import support4 from './supports/linc162.png'
 
+
+// partner 이미지 경로
+import partner1 from './partners/codling.png'
+import partner2 from './partners/edu-village.png'
+import partner3 from './partners/leplus.png'
+import partner4 from './partners/mplace.png'
+
 // 이미지 배열
 const slideImages = [image1, image2, image3, image4, image5, image6];
 const supportImages = [support1, support2, support3, support4];
+const partnerImages = [partner1, partner2, partner3, partner4];
 
 // 이미지 배열 내보내기
-export {slideImages, supportImages};
+export {slideImages, supportImages, partnerImages};
