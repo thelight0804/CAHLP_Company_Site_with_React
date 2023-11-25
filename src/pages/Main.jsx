@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import useCustomInView from './../hooks/useCustomInView';
 
 import styles from './main.module.scss'
-import {slideImages, supportImages} from './../../public/img/index'
+import {slideImages, supportImages, partnerImages} from './../../public/img/index'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -20,6 +20,7 @@ function Main() {
   const {ref: ref9, inView: inView9, entry: entry9} = useCustomInView();
   const {ref: ref10, inView: inView10, entry: entry10} = useCustomInView();
   const {ref: ref11, inView: inView11, entry: entry11} = useCustomInView();
+  const {ref: ref12, inView: inView12, entry: entry12} = useCustomInView();
 
 
   
@@ -172,6 +173,18 @@ function Main() {
           <h1 className={styles.highlight} style={{fontSize: '3.5rem'}}>Supports</h1>
           <div className={styles.supportContainer}>
             {supportImages.map((image, i)=>{
+              return (
+                  <img src={image} key = {i} alt="supportImage" className={styles.supportImage}/>
+                )
+              })
+            }
+          </div>
+        </div>
+
+        <div ref={ref12} className={`${styles.contentBox} ${inView12 ? styles.inViewBox : styles.outViewBox}`}>
+          <h1 className={styles.highlight} style={{fontSize: '3.5rem'}}>Partners</h1>
+          <div className={styles.supportContainer}>
+            {partnerImages.map((image, i)=>{
               return (
                   <img src={image} key = {i} alt="supportImage" className={styles.supportImage}/>
                 )
