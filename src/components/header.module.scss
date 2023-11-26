@@ -14,6 +14,22 @@
     padding: 10px 20px 10px 20px;
     z-index: 100;
 }
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.inBox {
+    background-color: white;
+    animation: slideDown 0.3s ease-in-out;
+}
+.outBox{
+    background-color: white;
+    animation: slideUp 0.3s ease-in-out forwards;
+}
 .logo {
     height: 50px;
     cursor: pointer;
@@ -61,15 +77,33 @@
 
     font-size: 2rem;
     font-weight: bold;
-    color: #e8e6e3;
+    color: black;
 }
 .modalOpen { // NavMenu가 열렸을 때
-    background-color: #181a1b;
+    background-color: white;
 
     .dot {
         background-color: white;
     }
     .dotCenter {
         background-color: #4b4c4c;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-100%);
     }
 }

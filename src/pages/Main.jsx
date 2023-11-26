@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "react-slick";
 import useCustomInView from './../hooks/useCustomInView';
 import Footer from "../components/Footer";
@@ -22,8 +21,6 @@ function Main() {
   const {ref: ref10, inView: inView10, entry: entry10} = useCustomInView();
   const {ref: ref11, inView: inView11, entry: entry11} = useCustomInView();
   const {ref: ref12, inView: inView12, entry: entry12} = useCustomInView();
-
-
   
   return (
     <div className={styles.container}>
