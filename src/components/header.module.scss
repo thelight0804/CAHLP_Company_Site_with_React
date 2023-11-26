@@ -52,7 +52,7 @@
     margin-right: 5px;
     
     background-color: #4b4c4c;
-
+    border: 1px solid #4b4b4b;
 }
 .dotCenter { // 중앙에 위치한 점
     background-color: white;
@@ -81,7 +81,6 @@
 }
 .modalOpen { // NavMenu가 열렸을 때
     background-color: white;
-
     .dot {
         background-color: white;
     }

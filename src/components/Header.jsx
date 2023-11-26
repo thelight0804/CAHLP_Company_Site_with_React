@@ -32,10 +32,7 @@ function Header() {
   return (
       <>
         <div 
-          className={`
-            ${styles.header}
-            ${isModalOpen && styles.modalOpen}
-          `}
+          className={`${styles.header} ${isModalOpen && styles.modalOpen}`}
         >
           <div className={`${styles.background} ${initialLoad ? '' : (scroll ? styles.inBox : styles.outBox)}`}></div>
               <img src={"public/img/cahlp-dark.png"}
