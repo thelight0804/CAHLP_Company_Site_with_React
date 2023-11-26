@@ -96,7 +96,7 @@ function Main() {
 
         <div ref={ref6} className={`${styles.contentBox} ${inView6 ? styles.inViewBox : styles.outViewBox}`}>
           <h2>CAHLP(캘프) 컴퍼니는</h2>
-          <h3>
+          <h3 style={{fontSize: '1rem', color: '#4b4c4c'}}>
             100년 이상 동안의 만들어진 문제를 <br/>
             3년안에 창의적이고, 도전적인 솔루션과 <br/>
             혁신적인 기술로 혁신하고, 10년 뒤는 <br/>
@@ -104,7 +104,7 @@ function Main() {
           <h2>
             우리가 만든 세상이 더 나은 미래
           </h2>
-          <h3>
+          <h3  style={{fontSize: '1rem', color: '#4b4c4c'}}>
             로 나아갈 수 있도록 전진 할것입니다.
           </h3>
         </div>

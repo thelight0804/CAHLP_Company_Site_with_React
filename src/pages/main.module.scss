@@ -19,9 +19,12 @@ video {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+
+  color: #e8e6e3;
   
   h3 {
     margin-top: 15px;
+    font-size: 1rem;
   }
 }
 .contentBox {
@@ -40,7 +43,7 @@ video {
 }
 .paragraph { // 단락
   text-align: center;
-  font-size: 2.8rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #4b4c4c;
 }
@@ -56,7 +59,7 @@ video {
 }
 // 그라데이션 하이라이트
 .highlight {
-  font-size: 2rem;
+  font-size: 1.5rem;
   background: linear-gradient(to right top, #0ca246, #347abe);
   color: transparent;
   -webkit-background-clip: text; 
@@ -89,7 +92,7 @@ video {
   display: grid;
   grid-template-columns: minmax(100px, 20%) 80%; // 1열 20%(최소 100px), 2열 80%
   // TODO: 데스크탑이면 grid-template-columns: minmax(100px, 20%) 60%;
-  margin: 2rem auto;
+  margin: 2rem 1rem;
 }
 .historyYear {
   grid-column: 1; // grid 1열에 배치
@@ -115,7 +118,7 @@ video {
   border-bottom: 1px solid #e5e5e5;
 }
 .mediaTitle {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
