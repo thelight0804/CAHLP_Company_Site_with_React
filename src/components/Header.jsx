@@ -64,7 +64,9 @@ function NavMenu(props){
       <button className={styles.navButton}
         onClick={()=>{
           props.setIsModalOpen(false);
-          props.navigate("UmiBrand");
+          alert("준비중입니다.");
+          // UmiBrand 페이지 개발 할 때 아래 주석을 해제하세요.
+          // props.navigate("UmiBrand");
         }}
       >우미 브랜드 (준비중)</button>
       <button className={styles.navButton}
