@@ -34,6 +34,7 @@
     height: 50px;
     cursor: pointer;
 }
+// 모바일 토글 버튼
 .toggleButton {
     background: transparent;
     border: none;
@@ -57,6 +58,26 @@
 .dotCenter { // 중앙에 위치한 점
     background-color: white;
     border: 1px solid #4b4b4b;
+}
+// 데스크탑 네비게이션 메뉴
+.headerButton{
+    display: none; // 모바일에서는 보이지 않음
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+
+    padding: 1rem;
+    margin: 1rem;
+
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+.headerButtonBlack {
+    // 스크롤을 내리면 검은색으로 변경
+    color: black;
+    transition: color 1s;
 }
 
 // NavMenu
@@ -104,5 +125,21 @@
     }
     100% {
         transform: translateY(-100%);
+    }
+}
+
+// 반응형 스타일
+@media(min-width: 700px){
+    .header {
+        justify-content: flex-start;
+    }
+    .toggleButton {
+        display: none;
+    }
+    .headerButton {
+        display: inline-block;
+    }
+    .nav {
+        display: none;
     }
 }
