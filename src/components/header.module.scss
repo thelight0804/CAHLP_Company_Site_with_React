@@ -86,6 +86,9 @@
     top: 70px; // Header 높이만큼 상단에서 떨어지게 설정
     width: 100%;
     height: calc(100vh - 70px); // 전체 높이에서 Header 높이를 뺀 만큼
+
+    opacity: 0; // 처음에는 투명하게 설정
+    transition: opacity 0.3s ease-in-out; // 서서히 나타나기
     z-index: 99;
 }
 .navButton {
@@ -100,8 +103,16 @@
     font-weight: bold;
     color: black;
 }
+.headerModalOpen { // NavMenu가 열렸을 때
+    background-color: white;
+    transition: background-color 0.3s ease-in-out;
+}
 .modalOpen { // NavMenu가 열렸을 때
     background-color: white;
+    opacity: 1;
+    .outBox {
+        opacity: 1;
+    }
     .dot {
         background-color: white;
     }

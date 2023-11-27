@@ -31,7 +31,7 @@ function Header() {
 
   return (
       <>
-        <div className={`${styles.header} ${isModalOpen && styles.modalOpen}`}>
+        <div className={`${styles.header} ${isModalOpen && styles.headerModalOpen}`}>
           <div className={`${styles.background} ${initialLoad ? '' : (scroll ? styles.inBox : styles.outBox)}`}></div>
               <img src={"public/img/cahlp-dark.png"}
                 className={styles.logo}
@@ -58,7 +58,8 @@ function Header() {
               E-Service
             </button>
           </div>
-        {isModalOpen && <NavMenu isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} navigate={navigate}/>}
+        {/* {isModalOpen && <NavMenu isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} navigate={navigate}/>} */}
+        <NavMenu isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} navigate={navigate} />
       </>
   );
 }
