@@ -90,16 +90,14 @@ video {
 
 // 약사
 .history {
-  display: grid;
-  grid-template-columns: minmax(100px, 20%) 80%; // 1열 20%(최소 100px), 2열 80%
-  // TODO: 데스크탑이면 grid-template-columns: minmax(100px, 20%) 60%;
+  display: block;
   margin: 2rem 1rem;
 }
 .historyYear {
   grid-column: 1; // grid 1열에 배치
   font-weight: bold;
   margin-right: 1.5rem;
-  text-align: right;
+  text-align: left;
   h3 {
     font-size: 2rem;
     font-weight: bold;
@@ -193,7 +191,15 @@ video {
   .highlightContent { // 그라데이션 하이라이트 내용
     font-size: 1.5rem;
   }
-  .historyContent { // 약사 내용
+  // 약사
+  .history {
+    display: grid;
+    grid-template-columns: minmax(100px, 20%) 80%; // 1열 20%(최소 100px), 2열 80%
+  }
+  .historyYear {
+    text-align: right;
+  }
+  .historyContent {
     margin-right: 5rem;
   }
   .media { // 미디어 컨테이너
