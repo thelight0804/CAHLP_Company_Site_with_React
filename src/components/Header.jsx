@@ -70,7 +70,7 @@ function Header() {
 function NavMenu(props){
   return(
     <div className={`${styles.nav} ${props.isModalOpen && styles.modalOpen}`}>
-      <button className={styles.navButton}
+      <button className={`${styles.navButton} ${props.isModalOpen && styles.showButton}`}
         onClick={()=>{
           props.setIsModalOpen(false);
           alert("준비중입니다.");
@@ -78,7 +78,7 @@ function NavMenu(props){
           // props.navigate("UmiBrand");
         }}
       >우미 브랜드 (준비중)</button>
-      <button className={styles.navButton}
+      <button className={`${styles.navButton} ${props.isModalOpen && styles.showButton}`}
         onClick={()=> window.location.href = "https://login.office.hiworks.com/cahlp.kr" }
       >E-Service</button>
     </div>

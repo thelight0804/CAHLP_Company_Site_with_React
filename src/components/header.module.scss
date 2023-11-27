@@ -92,7 +92,7 @@
     z-index: 99;
 }
 .navButton {
-    display: block;
+    display: none;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -102,6 +102,9 @@
     font-size: 2rem;
     font-weight: bold;
     color: black;
+}
+.showButton {
+    display: block;
 }
 .headerModalOpen { // NavMenu가 열렸을 때
     background-color: white;
