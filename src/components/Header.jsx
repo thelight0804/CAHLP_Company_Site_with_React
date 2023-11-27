@@ -31,9 +31,7 @@ function Header() {
 
   return (
       <>
-        <div 
-          className={`${styles.header} ${isModalOpen && styles.modalOpen}`}
-        >
+        <div className={`${styles.header} ${isModalOpen && styles.modalOpen}`}>
           <div className={`${styles.background} ${initialLoad ? '' : (scroll ? styles.inBox : styles.outBox)}`}></div>
               <img src={"public/img/cahlp-dark.png"}
                 className={styles.logo}
@@ -48,6 +46,16 @@ function Header() {
                 <span className={styles.dot}></span>
                 <span className={`${styles.dot} ${styles.dotCenter}`}></span>
                 <span className={styles.dot}></span>
+            </button>
+            <button 
+              className={`${styles.headerButton} ${scroll && styles.headerButtonBlack}`} 
+              onClick={()=>{alert("준비중입니다.");}}>
+              우미 브랜드 (준비중)
+            </button>
+            <button 
+              className={`${styles.headerButton} ${scroll && styles.headerButtonBlack}`}
+              onClick={()=> window.location.href = "https://login.office.hiworks.com/cahlp.kr" }>
+              E-Service
             </button>
           </div>
         {isModalOpen && <NavMenu isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} navigate={navigate}/>}

@@ -12,15 +12,15 @@
   font-size: 0.7rem;
 }
 .snsContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr; // 2열로 배치
-  gap: 2rem;
-  width: 25%;
-  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  text-align: center;
 }
 .snsImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 1rem; // 이미지 간격
+  vertical-align: top; // 이미지 상단 정렬
   cursor: pointer; // 마우스 올렸을 때 손가락 모양
 }
