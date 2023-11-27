@@ -57,6 +57,12 @@ video {
   margin: 0 10px;
   border-bottom: 5px solid #e5e5e5;
 }
+
+.gridContainer{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 600px); // 600px 너비의 열을 자동으로 생성
+  justify-content: center; // 가운데 정렬
+}
 // 그라데이션 하이라이트
 .highlight {
   font-size: 1.5rem;
