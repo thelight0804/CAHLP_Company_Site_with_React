@@ -4,6 +4,8 @@ import Footer from "../components/Footer";
 
 import styles from './main.module.scss'
 import {slideImages, supportImages, partnerImages} from './../../public/img/index'
+import videoSrc from "./../../public/video/via.mp4" // 비디오 경로
+import logoSrc from "./../../public/img/cahlp-dark.png" // 로고 이미지 경로
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -26,7 +28,7 @@ function Main() {
     <div className={styles.container}>
       <div className={styles.header}>
         <video muted autoPlay loop>
-          <source src={"./../../public/video/via.mp4"} type="video/mp4" />
+          <source src={videoSrc} type="video/mp4" />
         </video>
         <div className={styles.mainText}>
           {/* TODO: [회의] 글자 색 가독성으로 인한 변경 */}
@@ -51,7 +53,7 @@ function Main() {
         </div>
 
         <div ref={ref2} className={`${styles.contentBox} ${inView2 ? styles.inViewBox : styles.outViewBox}`}>
-          <img src="./../../public/img/cahlp-dark.png" />
+          <img src={logoSrc} />
           <h3>
             우리는 이색반려동물을 키움에 있어 <br/>
             정보와 데이터가 발목을 잡아서는 안된다고 생각합니다.

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import styles from './header.module.scss'
-import { useNavigate } from "react-router-dom";
+import logoSrc from './../../public/img/cahlp-dark.png' // 로고 이미지 경로
 
 function Header() {
   var [isModalOpen, setIsModalOpen] = useState(false); // modal open 여부
@@ -33,7 +34,7 @@ function Header() {
       <>
         <div className={`${styles.header} ${isModalOpen && styles.headerModalOpen}`}>
           <div className={`${styles.background} ${initialLoad ? '' : (scroll ? styles.inBox : styles.outBox)}`}></div>
-              <img src={"public/img/cahlp-dark.png"}
+              <img src={logoSrc}
                 className={styles.logo}
                 onClick={() => {
                   setIsModalOpen(false);
