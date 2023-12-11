@@ -119,6 +119,7 @@ video {
 // 미디어
 .media {
   width: 100%;
+  // TODO: 모바일에서 미디어 padding
   padding: 1.5rem 0 1.5rem 1rem;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -137,7 +138,6 @@ video {
   color: #666;
 }
 .media:hover, .media:active {
-  // TODO: [회의] 마우스 올렸을 때 색깔 지정
   background: linear-gradient(to right top, #ffdcdc, #fff8e5);
   cursor: pointer;
 }
@@ -209,6 +209,7 @@ video {
     margin-right: 5rem;
   }
   .media { // 미디어 컨테이너
+    // TODO: 데스크탑에서 미디어 padding
     padding: 1.5rem 0 1.5rem 10%;
   }
   .supportContainer { // Supports, Partners 이미지 컨테이너

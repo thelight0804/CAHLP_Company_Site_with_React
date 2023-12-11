@@ -49,7 +49,11 @@ function Header() {
             </button>
             <button 
               className={`${styles.headerButton} ${scroll && styles.headerButtonBlack}`} 
-              onClick={()=>{alert("준비중입니다.");}}>
+              onClick={()=>{
+                alert("준비중입니다.");
+                // TODO: UmiBrand 페이지 개발 할 때 아래 주석을 해제하세요.
+                // navigate("UmiBrand");
+              }}>
               우미 브랜드 (준비중)
             </button>
             <button 

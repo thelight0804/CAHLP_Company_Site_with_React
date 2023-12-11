@@ -90,6 +90,7 @@
     opacity: 0; // 처음에는 투명하게 설정
     transition: opacity 0.3s ease-in-out; // 서서히 나타나기
     z-index: 99;
+    display: none;
 }
 .navButton {
     display: none;
@@ -108,10 +109,11 @@
 }
 .headerModalOpen { // NavMenu가 열렸을 때
     background-color: white;
-    transition: background-color 0.3s ease-in-out;
+    transition: display 0.3s ease-in-out;
 }
 .modalOpen { // NavMenu가 열렸을 때
     background-color: white;
+    display: block;
     opacity: 1;
     .outBox {
         opacity: 1;
