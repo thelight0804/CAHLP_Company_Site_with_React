@@ -19,9 +19,12 @@ video {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+
+  color: #e8e6e3;
   
   h3 {
     margin-top: 15px;
+    font-size: 1rem;
   }
 }
 .contentBox {
@@ -40,7 +43,7 @@ video {
 }
 .paragraph { // 단락
   text-align: center;
-  font-size: 2.8rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #4b4c4c;
 }
@@ -54,9 +57,15 @@ video {
   margin: 0 10px;
   border-bottom: 5px solid #e5e5e5;
 }
+
+.gridContainer{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 600px); // 600px 너비의 열을 자동으로 생성
+  justify-content: center; // 가운데 정렬
+}
 // 그라데이션 하이라이트
 .highlight {
-  font-size: 2rem;
+  font-size: 1.5rem;
   background: linear-gradient(to right top, #0ca246, #347abe);
   color: transparent;
   -webkit-background-clip: text; 
@@ -73,6 +82,7 @@ video {
   // 가로로 3개씩 배치
   display: inline-block;
   width: 32%;
+  max-width: 15rem;
   vertical-align: top;
 }
 .projectName, .projectCount{
@@ -86,16 +96,14 @@ video {
 
 // 약사
 .history {
-  display: grid;
-  grid-template-columns: minmax(100px, 20%) 80%; // 1열 20%(최소 100px), 2열 80%
-  // TODO: 데스크탑이면 grid-template-columns: minmax(100px, 20%) 60%;
-  margin: 2rem auto;
+  display: block;
+  margin: 2rem 1rem;
 }
 .historyYear {
   grid-column: 1; // grid 1열에 배치
   font-weight: bold;
   margin-right: 1.5rem;
-  text-align: right;
+  text-align: left;
   h3 {
     font-size: 2rem;
     font-weight: bold;
@@ -111,11 +119,12 @@ video {
 // 미디어
 .media {
   width: 100%;
+  // TODO: 모바일에서 미디어 padding
   padding: 1.5rem 0 1.5rem 1rem;
   border-bottom: 1px solid #e5e5e5;
 }
 .mediaTitle {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
@@ -129,24 +138,17 @@ video {
   color: #666;
 }
 .media:hover, .media:active {
-  // TODO: [회의] 마우스 올렸을 때 색깔 지정
   background: linear-gradient(to right top, #ffdcdc, #fff8e5);
   cursor: pointer;
 }
 // Supports 이미지
 .supportContainer {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr); // 2열
-  grid-template-columns: repeat(2,  1fr); // 2행
-  gap: 2rem; // 간격
-
   margin-top: 1rem;
 }
 
 .supportImage {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  display: block;
+  padding: 1rem 5rem;
 }
 
 // 요소가 커지는 애니메이션
@@ -165,5 +167,83 @@ video {
   }
   to {
     transform: scale(0.7);
+  }
+}
+
+// 반응형 스타일
+@media(min-width: 700px){
+  .mainText {  // 영상 위 텍스트
+    h2 {
+      font-size: 2rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+    }
+  }
+  .contentBox { // 크기가 변경되는 콘텐츠
+    h2 {
+      font-size: 2.3rem;
+    }
+    h3 {
+      font-size: 1.8rem;
+    }
+  }
+  .paragraph { // 문단
+    font-size: 3rem;
+  }
+  .highlight { // 그라데이션 하이라이트
+    font-size: 2.5rem;
+  }
+  .highlightContent { // 그라데이션 하이라이트 내용
+    font-size: 1.5rem;
+  }
+  // 약사
+  .history {
+    display: grid;
+    grid-template-columns: minmax(100px, 20%) 80%; // 1열 20%(최소 100px), 2열 80%
+  }
+  .historyYear {
+    text-align: right;
+  }
+  .historyContent {
+    margin-right: 5rem;
+  }
+  .media { // 미디어 컨테이너
+    // TODO: 데스크탑에서 미디어 padding
+    padding: 1.5rem 0 1.5rem 10%;
+  }
+  .supportContainer { // Supports, Partners 이미지 컨테이너
+    // 2X2 그리드로 배치
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); // 2열
+    grid-template-columns: repeat(2,  1fr); // 2행
+    gap: 2rem; // 간격
+
+    margin: 1rem 15% 0 15%;
+  }
+  .supportImage { // Supports, Partners 이미지
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1rem 0;
+  }
+
+  // 요소가 커지는 애니메이션 - 데스크탑
+  @keyframes expandScale {
+    from {
+      transform: scale(0.5);
+    }
+    to {
+      transform: scale(0.7);
+    }
+  }
+  // 요소가 작아지는 애니메이션 - 데스크탑
+  @keyframes shrinkScale {
+    from {
+      transform: scale(0.7);
+    }
+    to {
+      transform: scale(0.5);
+    }
   }
 }

@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "react-slick";
 import useCustomInView from './../hooks/useCustomInView';
 import Footer from "../components/Footer";
@@ -22,8 +21,6 @@ function Main() {
   const {ref: ref10, inView: inView10, entry: entry10} = useCustomInView();
   const {ref: ref11, inView: inView11, entry: entry11} = useCustomInView();
   const {ref: ref12, inView: inView12, entry: entry12} = useCustomInView();
-
-
   
   return (
     <div className={styles.container}>
@@ -70,43 +67,45 @@ function Main() {
 
         <h1 className={styles.paragraph}>미션, 비전 & 핵심 가치</h1>
         <div className={styles.bottomBorder}/>
-        <div ref={ref4} 
-          className={`${styles.contentBox} ${inView4 ? styles.inViewBox : styles.outViewBox}`}
-          style={{marginTop: '2rem'}}
-        >
-          <h1 className={styles.highlight}>[ 미션 MISSION ]</h1>
-          <p>우리의 조직이 왜 존재하는가</p>
-          <h3 style={{marginTop: '2rem'}}>
-            “누구나 마음 편히 이색반려동물을 <br/>
-            키울수 있는 그날까지 만들어 가는것”
-          </h3>
-        </div>
+        <div className={styles.gridContainer}>
+          <div ref={ref4} 
+            className={`${styles.contentBox} ${inView4 ? styles.inViewBox : styles.outViewBox}`}
+            style={{marginTop: '2rem'}}
+          >
+            <h1 className={styles.highlight}>[ 미션 MISSION ]</h1>
+            <p className={styles.highlightContent}>우리의 조직이 왜 존재하는가</p>
+            <h3 style={{marginTop: '2rem'}}>
+              “누구나 마음 편히 이색반려동물을 <br/>
+              키울수 있는 그날까지 만들어 가는것”
+            </h3>
+          </div>
 
-        <div ref={ref5}
-          className={`${styles.contentBox} ${styles.mission} ${inView5 ? styles.inViewBox : styles.outViewBox}`}
-          style={{marginTop: '2rem'}}
-        >
-          <h1 className={styles.highlight}>[ 비전 VISION ]</h1>
-          <p>우리는 어떤 미래를 그리고 있는가</p>
-          <h3 style={{marginTop: '2rem'}}>
-            “전세계에 있는 누구나 이색반려동물을 키울때 <br/>
-            가장 먼저 떠올리고 찾는 존재가 되는것”
-          </h3>
+          <div ref={ref5}
+            className={`${styles.contentBox} ${styles.mission} ${inView5 ? styles.inViewBox : styles.outViewBox}`}
+            style={{marginTop: '2rem'}}
+          >
+            <h1 className={styles.highlight}>[ 비전 VISION ]</h1>
+            <p className={styles.highlightContent}>우리는 어떤 미래를 그리고 있는가</p>
+            <h3 style={{marginTop: '2rem'}}>
+              “전세계에 있는 누구나 이색반려동물을 키울때 <br/>
+              가장 먼저 떠올리고 찾는 존재가 되는것”
+            </h3>
+          </div>
         </div>
 
         <div ref={ref6} className={`${styles.contentBox} ${inView6 ? styles.inViewBox : styles.outViewBox}`}>
           <h2>CAHLP(캘프) 컴퍼니는</h2>
-          <h3>
+          <p className={styles.highlightContent}>
             100년 이상 동안의 만들어진 문제를 <br/>
             3년안에 창의적이고, 도전적인 솔루션과 <br/>
             혁신적인 기술로 혁신하고, 10년 뒤는 <br/>
-          </h3>
+          </p>
           <h2>
             우리가 만든 세상이 더 나은 미래
           </h2>
-          <h3>
+          <p className={styles.highlightContent}>
             로 나아갈 수 있도록 전진 할것입니다.
-          </h3>
+          </p>
         </div>
 
         <h1 className={styles.paragraph}>우리가 걸어온 길은</h1>
@@ -141,29 +140,31 @@ function Main() {
 
         <div ref={ref8} className={`${styles.contentBox} ${inView8 ? styles.inViewBox : styles.outViewBox}`}>
           <h1 className={styles.highlight} style={{fontSize: '3.5rem'}}>Team CAHLP</h1>
-          <p>우리는 팀이기에 불가능이란 없습니다</p>
+          <p className={styles.highlightContent}>우리는 팀이기에 불가능이란 없습니다</p>
         </div>
         <h1 className={styles.paragraph}>CAHLP 컴퍼니의 조직문화</h1>
         <div className={styles.bottomBorder}/>
-        <div ref={ref9} 
-          className={`${styles.contentBox} ${inView9 ? styles.inViewBox : styles.outViewBox}`}
-          style={{marginTop: '2rem'}}
-        >
-          <h1 className={styles.highlight}> &lt; 언제나 강조되는 핵심 키워드 &gt;</h1>
-          <h2>#팀 #소통 # 책임과 존중</h2>
-        </div>
-        <div ref={ref10} 
-          className={`${styles.contentBox} ${inView10 ? styles.inViewBox : styles.outViewBox}`}
-          style={{marginTop: '2rem'}}
-        >
-          <h1 className={styles.highlight}> &lt; 주요문화 &gt;</h1>
-          <h2>
-            끊임없는 소통 <br/>
-            책임과 존중 <br/>
-            수평적인 조직문화 <br/>
-            자발적 동기부여 <br/>
-            빠른 실행력 <br/>
-          </h2>
+        <div className={styles.gridContainer}>
+          <div ref={ref9} 
+            className={`${styles.contentBox} ${inView9 ? styles.inViewBox : styles.outViewBox}`}
+            style={{marginTop: '2rem'}}
+          >
+            <h1 className={styles.highlight}> &lt; 언제나 강조되는 핵심 키워드 &gt;</h1>
+            <p className={styles.highlightContent} style={{fontWeight: 'bold'}}>#팀 #소통 # 책임과 존중</p>
+          </div>
+          <div ref={ref10} 
+            className={`${styles.contentBox} ${inView10 ? styles.inViewBox : styles.outViewBox}`}
+            style={{marginTop: '2rem'}}
+          >
+            <h1 className={styles.highlight}> &lt; 주요문화 &gt;</h1>
+            <p className={styles.highlightContent} style={{fontWeight: 'bold'}}>
+              끊임없는 소통 <br/>
+              책임과 존중 <br/>
+              수평적인 조직문화 <br/>
+              자발적 동기부여 <br/>
+              빠른 실행력 <br/>
+            </p>
+          </div>
         </div>
 
         <h1 className={styles.paragraph}>미디어 속 CAHLP 컴퍼니</h1>

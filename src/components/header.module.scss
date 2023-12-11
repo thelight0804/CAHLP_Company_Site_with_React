@@ -14,10 +14,27 @@
     padding: 10px 20px 10px 20px;
     z-index: 100;
 }
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.inBox {
+    background-color: white;
+    animation: slideDown 0.3s ease-in-out;
+}
+.outBox{
+    background-color: white;
+    animation: slideUp 0.3s ease-in-out forwards;
+}
 .logo {
     height: 50px;
     cursor: pointer;
 }
+// 모바일 토글 버튼
 .toggleButton {
     background: transparent;
     border: none;
@@ -36,11 +53,31 @@
     margin-right: 5px;
     
     background-color: #4b4c4c;
-
+    border: 1px solid #4b4b4b;
 }
 .dotCenter { // 중앙에 위치한 점
     background-color: white;
     border: 1px solid #4b4b4b;
+}
+// 데스크탑 네비게이션 메뉴
+.headerButton{
+    display: none; // 모바일에서는 보이지 않음
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+
+    padding: 1rem;
+    margin: 1rem;
+
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+.headerButtonBlack {
+    // 스크롤을 내리면 검은색으로 변경
+    color: black;
+    transition: color 1s;
 }
 
 // NavMenu
@@ -49,10 +86,14 @@
     top: 70px; // Header 높이만큼 상단에서 떨어지게 설정
     width: 100%;
     height: calc(100vh - 70px); // 전체 높이에서 Header 높이를 뺀 만큼
+
+    opacity: 0; // 처음에는 투명하게 설정
+    transition: opacity 0.3s ease-in-out; // 서서히 나타나기
     z-index: 99;
+    display: none;
 }
 .navButton {
-    display: block;
+    display: none;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -61,15 +102,60 @@
 
     font-size: 2rem;
     font-weight: bold;
-    color: #e8e6e3;
+    color: black;
+}
+.showButton {
+    display: block;
+}
+.headerModalOpen { // NavMenu가 열렸을 때
+    background-color: white;
+    transition: display 0.3s ease-in-out;
 }
 .modalOpen { // NavMenu가 열렸을 때
-    background-color: #181a1b;
-
+    background-color: white;
+    display: block;
+    opacity: 1;
+    .outBox {
+        opacity: 1;
+    }
     .dot {
         background-color: white;
     }
     .dotCenter {
         background-color: #4b4c4c;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+// 반응형 스타일
+@media(min-width: 700px){
+    .header {
+        justify-content: flex-start;
+    }
+    .toggleButton {
+        display: none;
+    }
+    .headerButton {
+        display: inline-block;
+    }
+    .nav {
+        display: none;
     }
 }
