@@ -5,14 +5,15 @@
 </div>
 <br>
 <div>
-  <img src="https://github.com/CAHLP-Team/CAHLP_Company_Site_with_React/assets/69424845/afe4af75-91f9-40af-b231-1167cb3f9063">
+  <img src="https://github.com/thelight0804/CAHLP_Company_Site_with_React/assets/69424845/3ce8873b-ccb2-408f-aca3-778cf77cc43f">
 </div>
+
 <br>
 <table>
     <thead>
     <tr>
-        <th><img src="https://github.com/CAHLP-Team/CAHLP_Company_Site_with_React/assets/69424845/813e39d6-1dfa-494f-add4-18a3ab7678cb"></th>
-        <th><img src="https://github.com/CAHLP-Team/CAHLP_Company_Site_with_React/assets/69424845/6db8b910-4748-4fd9-bbae-2ae38b0bcb96"></th>
+        <th><img src="https://github.com/thelight0804/CAHLP_Company_Site_with_React/assets/69424845/46af381a-399a-4093-a02f-768e7778c2e8"></th>
+        <th><img src="https://github.com/thelight0804/CAHLP_Company_Site_with_React/assets/69424845/28a6595c-305b-4fc3-bccd-5060bc156072"></th>
     </tr>
     </thead>
     <tbody>
@@ -26,8 +27,7 @@
 <br>
 
 ## 아키텍처
-<img src="https://github.com/CAHLP-Team/CAHLP_Company_Site_with_React/assets/69424845/bceecbc4-74eb-44d0-abfd-f263fcb82753" width="40%">
-
+<img src="https://github.com/thelight0804/CAHLP_Company_Site_with_React/assets/69424845/7ee26e0a-7049-4e0f-ade5-20c261763fe6" width="40%">
 <br>
 <br>
 
